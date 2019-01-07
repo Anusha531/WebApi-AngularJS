@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+
+<style>
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<h2>Welcome to Anusha's web site</h2>
+<body data-ng-app="APIModule">
+    <div id="tblSubs" ng-controller="APIController">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Credits</th>
+                <th>Department</th>
+            </tr>
+            <tbody data-ng-repeat="course in courses">
+                <tr>
+                    <td>{{course.CourseID}}</td>
+                    <td>{{course.Title}}</td>
+                    <td>{{course.Credits}}</td>
+                    <td>{{course.Department}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular/Module.js"></script>
+<script src="~/Scripts/angular/Service.js"></script>
+<script src="~/Scripts/angular/Controller.js"></script>
